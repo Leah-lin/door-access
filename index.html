@@ -108,7 +108,7 @@ a:hover, a:active {
 
 <body>
 
-<h2>中東館｜Access control system</h2>
+<h2>中東館會員管理｜Access control system</h2>
 
 <div>
 <a href="group.html" target="_blank">部門管理</a>
@@ -175,6 +175,7 @@ var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+var AddRow = document.getElementsByClassName("add-row")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -182,7 +183,10 @@ btn.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+ span.onclick = function() {
+  modal.style.display = "none";
+}
+AddRow.onclick = function() {
   modal.style.display = "none";
 }
 
