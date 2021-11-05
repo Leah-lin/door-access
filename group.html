@@ -83,7 +83,11 @@ a:hover, a:active {
         $(".add-row").click(function(){
             var name = $("#name").val();
             var email = $("#email").val();
-            var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td></tr>";
+          var MemberID = $("#MemberID").val();
+          var CardID = $("#email").val();
+          var group = $("#group").val();
+          var status = $("#status").val();
+            var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + name + "</td><td>" + email + "</td><td>" + MemberID + "</td><td>"+ CardID + "</td><td>"+ group + "</td><td>"+ status + "</td></tr>";
             $("table tbody").append(markup);
         });
         
@@ -122,6 +126,10 @@ a:hover, a:active {
     <form>
         <input type="text" id="name" placeholder="Name">
         <input type="text" id="email" placeholder="Email Address">
+    <input type="text" id="MemberID" placeholder="MemberID">
+    <input type="text" id="CardID" placeholder="CardID">
+    <input type="text" id="group" placeholder="group">
+    <input type="text" id="status" placeholder="status">
     	<input type="button" class="add-row" value="Add Row">
     </form>
   </div>
@@ -132,8 +140,12 @@ a:hover, a:active {
         <thead>
             <tr>
                 <th>Select</th>
-                <th>Name</th>
+                <th>姓名</th>
                 <th>Email</th>
+                <th>人員編號</th>
+                <th>部門名稱</th>
+                <th>卡號</th>
+                <th>狀態</th>
             </tr>
         </thead>
         <tbody>
@@ -141,6 +153,10 @@ a:hover, a:active {
                 <td><input type="checkbox" name="record"></td>
                 <td>Peter Parker</td>
                 <td>peterparker@mail.com</td>
+                <td>ID__1001</td>
+                <td>Block2</td>
+                <td>33333333</td>
+                <td>正常</td>
             </tr>
         </tbody>
     </table>
